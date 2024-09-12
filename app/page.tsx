@@ -4,6 +4,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
+        <header>
+          <nav className="p-2 border-b-[1px]">
+            <h1 className="font-bold">청년식당</h1>
+          </nav>
+        </header>
         <footer className="absolute bottom-0 w-full border-t-[1px] border-t-slate-100 pt-3">
           <ul className="flex gap-2 justify-around">
             <li className="flex-col gap-2 items-center">
