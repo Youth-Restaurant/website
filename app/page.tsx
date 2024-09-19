@@ -20,6 +20,8 @@ export default function Home() {
           </Swiper> */}
         </main>
         <footer className="fixed bottom-0 border-t-[1px] min-w-[320px] max-w-[600px] w-full border-t-slate-100 pt-3">
+          <nav>
+
           <ul className="flex gap-2 justify-around text-xs w-full">
             <li className="flex-col gap-2 items-center">
               <div className="flex justify-center">
@@ -58,6 +60,7 @@ export default function Home() {
                 </span>
               </li>
           </ul>
+          </nav>
         </footer>
     </div>
   );
