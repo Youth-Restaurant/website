@@ -1,16 +1,26 @@
 import { Bell, CalendarClock, House, Map } from "lucide-react";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-        <header>
-          <nav className="p-2 border-b-[1px]">
-            <h1 className="font-bold">청년식당</h1>
-          </nav>
+    <div className="max-w-[600px] my-0 mx-auto border-x-[1px] min-w-[320px]">
+        <header className="bg-white min-h-[52px]">
+          <div className="p-2 border-b-[1px]">
+            <h1 className="font-bold whitespace-nowrap">청년식당</h1>
+          </div>
         </header>
-        <footer className="absolute bottom-0 w-full border-t-[1px] border-t-slate-100 pt-3">
-          <ul className="flex gap-2 justify-around">
+        <main className="min-h-screen">
+          {/* <Swiper
+            pagination={{
+              dynamicBullets: true
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+        
+          </Swiper> */}
+        </main>
+        <footer className="fixed bottom-0 border-t-[1px] min-w-[320px] max-w-[600px] w-full border-t-slate-100 pt-3">
+          <ul className="flex gap-2 justify-around text-sm w-full">
             <li className="flex-col gap-2 items-center">
               <div className="flex justify-center">
                 <House />
@@ -41,6 +51,6 @@ export default function Home() {
               </li>
           </ul>
         </footer>
-    </>
+    </div>
   );
 }
