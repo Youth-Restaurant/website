@@ -1,4 +1,4 @@
-import { Bell, CalendarClock, House, Map } from "lucide-react";
+import { Bell, CookingPot, House, Map, MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
           </Swiper> */}
         </main>
         <footer className="fixed bottom-0 border-t-[1px] min-w-[320px] max-w-[600px] w-full border-t-slate-100 pt-3">
-          <ul className="flex gap-2 justify-around text-sm w-full">
+          <ul className="flex gap-2 justify-around text-xs w-full">
             <li className="flex-col gap-2 items-center">
               <div className="flex justify-center">
                 <House />
@@ -29,10 +29,10 @@ export default function Home() {
             </li>
             <li className="flex-col gap-2 items-center">
               <div className="flex justify-center">
-                <CalendarClock />
+                <CookingPot />
               </div>
               <span>
-                예약
+                음식
               </span>
             </li>
             <li className="flex-col gap-2 items-center">
@@ -41,6 +41,14 @@ export default function Home() {
               </div>
               <span>공지</span>
             </li>
+            <li className="flex-col gap-2 items-center">
+              <div className="flex justify-center">
+                <MessageCircle  />
+              </div>
+              <span>
+                FAQ
+                </span>
+              </li>
             <li className="flex-col gap-2 items-center">
               <div className="flex justify-center">
                 <Map />
