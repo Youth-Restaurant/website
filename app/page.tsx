@@ -1,11 +1,9 @@
 'use client';
 import { Bell, CookingPot, House, Map, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import Image from 'next/image';
-import { Autoplay } from 'swiper/modules';
 
 const icons = [
   { name: '소개', icon: <House />, link: '/intro' },
@@ -23,7 +21,9 @@ export default function Home() {
     >
       <header className='bg-white'>
         <div className='p-2 border-b-[1px]'>
-          <h1 className='font-bold whitespace-nowrap'>청년식당</h1>
+          <h1 className='font-bold whitespace-nowrap'>
+            {process.env.NEXT_PUBLIC_BUSINESS_NAME}
+          </h1>
         </div>
       </header>
       <main className='min-h-screen'>
@@ -38,7 +38,7 @@ export default function Home() {
           {[0].map((item) => (
             <SwiperSlide key={item}> */}
         <Image
-          src={`/images/view_${0}.png`}
+          src={`/${process.env.NEXT_PUBLIC_IMAGE_PATH}/view_${0}.png`}
           alt={`image-${0}`}
           width={600}
           height={400}
@@ -65,12 +65,15 @@ export default function Home() {
         <div className='px-3'>
           <h1 className='font-bold'>사업자 정보</h1>
           <p className='text-sm pb-3'>
-            사회적협동조합 청년식당 | 대표자 : {process.env.NEXT_PUBLIC_OWNER} |
-            주소 : {process.env.NEXT_PUBLIC_ADDRESS} | 전화 :{' '}
+            {process.env.NEXT_PUBLIC_BUSINESS_NAME} | 대표자 :{' '}
+            {process.env.NEXT_PUBLIC_OWNER} | 주소 :{' '}
+            {process.env.NEXT_PUBLIC_ADDRESS} | 전화 :{' '}
             {process.env.NEXT_PUBLIC_PHONE} | 사업자등록번호 :{' '}
             {process.env.NEXT_PUBLIC_BUSINESS_NUMBER}
           </p>
-          <p className='text-sm'>©2024 청년식당 All rights reserved</p>
+          <p className='text-sm'>
+            ©2024 {process.env.NEXT_PUBLIC_BUSINESS_NAME} All rights reserved
+          </p>
         </div>
       </footer>
     </div>
