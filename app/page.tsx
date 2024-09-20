@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div
       id='commonContainer'
-      className='max-w-[600px] my-0 mx-auto border-x-[1px] min-w-[320px]'
+      className='max-w-[600px] my-0 mx-auto border-x-[1px] min-w-[320px] box-content'
     >
       <header className='bg-white'>
         <div className='p-2 border-b-[1px]'>
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </header>
       <main className='min-h-screen'>
-        <Swiper
+        {/* <Swiper
           loop={true}
           modules={[Autoplay]}
           autoplay={{
@@ -35,20 +35,21 @@ export default function Home() {
             disableOnInteraction: false,
           }}
         >
-          {[1, 2, 3, 4].map((item) => (
-            <SwiperSlide key={item}>
-              <Image
-                src={`/images/view_${item}.jpeg`}
-                alt={`image-${item}`}
-                width={600}
-                height={400}
-                objectFit='cover'
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          {[0].map((item) => (
+            <SwiperSlide key={item}> */}
+        <Image
+          src={`/images/view_${0}.png`}
+          alt={`image-${0}`}
+          width={600}
+          height={400}
+          priority
+          quality={100}
+        />
+        {/* </SwiperSlide> */}
+        {/* ))} */}
+        {/* </Swiper> */}
       </main>
-      <nav className='min-w-[320px] max-w-[600px] fixed bottom-0 border-t-[1px] border-t-slate-100 pt-3 w-full'>
+      <nav className='min-w-[320px] max-w-[600px] fixed bottom-0 border-t-[1px] bg-white border-t-slate-100 pt-3 w-full'>
         <ul className='flex gap-2 justify-around text-xs w-full min-h-[52px]'>
           {icons.map((item) => (
             <li key={item.link}>
@@ -60,6 +61,18 @@ export default function Home() {
           ))}
         </ul>
       </nav>
+      <footer className='pb-32 pt-4 bg-neutral-100'>
+        <div className='px-3'>
+          <h1 className='font-bold'>사업자 정보</h1>
+          <p className='text-sm pb-3'>
+            사회적협동조합 청년식당 | 대표자 : {process.env.NEXT_PUBLIC_OWNER} |
+            주소 : {process.env.NEXT_PUBLIC_ADDRESS} | 전화 :{' '}
+            {process.env.NEXT_PUBLIC_PHONE} | 사업자등록번호 :{' '}
+            {process.env.NEXT_PUBLIC_BUSINESS_NUMBER}
+          </p>
+          <p className='text-sm'>©2024 청년식당 All rights reserved</p>
+        </div>
+      </footer>
     </div>
   );
 }
