@@ -11,7 +11,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className='min-w-[320px] max-w-[600px] fixed bottom-0 border-t-[1px] bg-white border-t-slate-100 pt-3 w-full'>
+    <nav className='min-w-[320px] max-w-[600px] fixed bottom-0 border-t-[1px] bg-white border-t-slate-100 pt-3 w-full z-50'>
       <ul className='flex gap-2 justify-around text-xs w-full min-h-[52px]'>
         {icons.map((item) => (
           <li key={item.link}>
