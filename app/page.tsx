@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import 'swiper/css';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
 const icons = [
   { name: '소개', icon: <House />, link: '/intro' },
@@ -12,6 +14,8 @@ const icons = [
   { name: 'FAQ', icon: <MessageCircle />, link: '/faq' },
   { name: '오시는 길', icon: <Map />, link: 'map' },
 ];
+
+const imagesCount = 3;
 
 export default function Home() {
   return (
@@ -28,7 +32,7 @@ export default function Home() {
         </div>
       </header>
       <main className='min-h-screen'>
-        {/* <Swiper
+        <Swiper
           loop={true}
           modules={[Autoplay]}
           autoplay={{
@@ -36,19 +40,21 @@ export default function Home() {
             disableOnInteraction: false,
           }}
         >
-          {[0].map((item) => (
-            <SwiperSlide key={item}> */}
-        <Image
-          src={`/${process.env.NEXT_PUBLIC_IMAGE_PATH}/view_${0}.png`}
-          alt={`image-${0}`}
-          width={600}
-          height={400}
-          priority
-          quality={100}
-        />
-        {/* </SwiperSlide> */}
-        {/* ))} */}
-        {/* </Swiper> */}
+          {Array.from({ length: imagesCount }).map((v, i) => (
+            <SwiperSlide key={i}>
+              <Image
+                src={`/${process.env.NEXT_PUBLIC_IMAGE_PATH}/main_slide_${
+                  i + 1
+                }.png`}
+                alt={`image-${0}`}
+                width={600}
+                height={400}
+                priority
+                quality={100}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </main>
       <nav className='min-w-[320px] max-w-[600px] fixed bottom-0 border-t-[1px] bg-white border-t-slate-100 pt-3 w-full'>
         <ul className='flex gap-2 justify-around text-xs w-full min-h-[52px]'>
