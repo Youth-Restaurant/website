@@ -20,7 +20,8 @@ export default function Home() {
       className='max-w-[600px] my-0 mx-auto border-x-[1px] min-w-[320px] box-content'
     >
       <header className='bg-white'>
-        <div className='p-2 border-b-[1px]'>
+        <div className='p-2 border-b-[1px] flex items-center'>
+          <Image src='/images/logo.png' alt='logo' width={100} height={100} />
           <h1 className='font-bold whitespace-nowrap'>
             {process.env.NEXT_PUBLIC_BUSINESS_NAME}
           </h1>
