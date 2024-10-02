@@ -6,7 +6,7 @@ import MainSlide from "@/components/MainSlide";
 import Header from "@/components/Header";
 import MainFoodSlide from "@/components/MainFoodSlide";
 import Link from "next/link";
-import { TailwindBgColor } from "@/tyoes/color";
+import { TailwindBgColor } from "@/types/color";
 
 export default function Home() {
   return (
@@ -25,7 +25,16 @@ export default function Home() {
               time="11:30 - 14:00"
               bgColor="bg-emerald-500"
             />
-            <TimeCard title="예약" time="11:30 - 20:00" bgColor="bg-blue-400" />
+            <div className="relative flex-1">
+              <TimeCard
+                title="예약"
+                time="11:30 - 20:00"
+                bgColor="bg-blue-400"
+              />
+              <span className="text-red-300 text-sm absolute">
+                *당일 예약 불가
+              </span>
+            </div>
           </div>
         </div>
         <div className="p-5 pb-0">
