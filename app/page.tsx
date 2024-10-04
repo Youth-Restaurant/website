@@ -7,7 +7,7 @@ import TimeCard from "@/components/TimeCard";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
       <MainSlide />
       <div className="p-3">
         <h1 className="text-lg font-semibold">운영시간</h1>
@@ -33,6 +33,6 @@ export default function Home() {
         </Link>
       </div>
       <MainFoodSlide />
-    </main>
+    </>
   );
 }
