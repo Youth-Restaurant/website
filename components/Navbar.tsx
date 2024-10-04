@@ -5,7 +5,7 @@ export default function Navbar() {
   const icons = [
     { name: "소개", icon: <House />, link: "/intro" },
     { name: "음식", icon: <CookingPot />, link: "/food" },
-    { name: "공지", icon: <Bell />, link: "/notice" },
+    { name: "공지", icon: <Bell />, link: "/notices" },
     { name: "FAQ", icon: <MessageCircle />, link: "/faq" },
     { name: "오시는 길", icon: <Map />, link: "map" },
   ];
