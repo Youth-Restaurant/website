@@ -6,7 +6,7 @@ import MainSlide from "@/components/MainSlide";
 import Header from "@/components/Header";
 import MainFoodSlide from "@/components/MainFoodSlide";
 import Link from "next/link";
-import { TailwindBgColor } from "@/types/color";
+import TimeCard from "@/components/TimeCard";
 
 export default function Home() {
   return (
@@ -48,24 +48,6 @@ export default function Home() {
       </main>
       <Navbar />
       <Footer />
-    </div>
-  );
-}
-
-type TimeCardProps = {
-  title: string;
-  time: string;
-  bgColor: TailwindBgColor;
-};
-function TimeCard({ title, time, bgColor }: TimeCardProps) {
-  return (
-    <div className="flex rounded-sm shadow flex-1">
-      <div className="bg-white px-3 py-5">{title}</div>
-      <div
-        className={`${bgColor} text-white flex-1 font-semibold flex items-center p-5`}
-      >
-        {time}
-      </div>
     </div>
   );
 }
