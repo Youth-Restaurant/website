@@ -4,8 +4,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import BackButton from "@/components/BackButton";
 
 // 음식 메뉴 데이터 배열
 const lunchboxMenu = [
@@ -136,13 +135,7 @@ export default function Food() {
       </Accordion>
 
       <div className="mt-10">
-        <Link
-          href="/"
-          className="bg-blue-500 text-white font-bold p-3 rounded inline-flex items-center"
-        >
-          <ArrowLeft className="h-5 w-5 mr-2" />
-          홈으로 돌아가기
-        </Link>
+        <BackButton href="/notices" label="홈으로 돌아가기" />
       </div>
     </main>
   );
